@@ -6,12 +6,23 @@ there is a timer of setInterval starts and a quest there will be 4 ans,
 buttons, the next div and restart the timer, if timer reaches 0 it will go,
 to the next div and gives that quest score 0 as if he did wrong after,
 choosing ans there will be another 4 qs and after he finishes the result,
-div shows and a button below that restarts the whole thing if he clicks it  
+div shows and a 
 */
 
 // selecting body:-
 
 const body = document.querySelector("body")
+
+// declaring the score variable:-
+
+let scoreSum = 0
+
+// adding event listeners to home page buttons:-
+
+const geoBtn = document.getElementById("geo")
+const historyBtn = document.getElementById("history")
+const fbBtn = document.getElementById("fb")
+
 
 // selecting divisions in html
 
@@ -19,12 +30,7 @@ const wlc = document.getElementById("wlc")
 
 
 
-// restart game:-
 
-const restart = () => {
-    endDiv.display = "none"
-    wlc.display = "block"
-};
 
 // creating needed divisions:-
 
@@ -100,6 +106,7 @@ const geographyPick = () => {
     })
 };
 
+geoBtn.addEventListener("click", geographyPick)
 
 // to geo q2:-
 
@@ -181,29 +188,38 @@ const geoQ5 = () => {
         geoA5.append(btn);
         btn.innerText = elem
         btn.className = "geo5Buttons"
-        btn.addEventListener("click", endScore);
+        btn.addEventListener("click", endScreen);
     })
 };
 
 // to end screen:-
 
-const endScore = () => {
-    geoDiv4.style.display = "none"
-    historyDiv4.style.display = "none"
-    fbDiv4.style.display = "none"
-    const endResult = document.createElement("h1");
-    endResult.id = "endHead"
-    endDiv.append(endResult);
-
-    const yourScore = document.createElement("h3");
-
-    const btn = document.createElement("button");
-    btn.innerText = "Play again"
-    btn.style.display = "block"
-    btn.id = "restart"
-    btn.addEventListener("click", restart)
-};
 
 
 // choosing history:-
+
+
+// choosing football:-
+
+
+// to end screen:-
+
+const endScreen = () => {
+    geoDiv5.style.display = "none"
+    historyDiv5.style.display = "none"
+    fbDiv5.style.display = "none"
+    const endResult = document.createElement("h1");
+    endResult.id = "endHead"
+    endDiv.append(endResult);
+    if (scoreSum > 2) {
+        endResult.innerText = "You Passed!"
+    }
+    else {
+        endResult.innerText = "You Failed :("
+    }
+    const yourScore = document.createElement("h3");
+    yourScore.id = "endScore"
+    yourScore.innerText = `Your score: ${scoreSum} from 5`
+};
+
 

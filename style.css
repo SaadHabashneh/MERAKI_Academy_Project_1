@@ -184,3 +184,20 @@ body {
 
 /* styling history screens */
 
+/* styling end screen */
+
+#endHead {
+    font-size: 1.5cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+}
+
+#endScore {
+    font-size: 1.5cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: crimson;
+}
