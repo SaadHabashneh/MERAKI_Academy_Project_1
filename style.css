@@ -1,0 +1,186 @@
+/* putting a body background image */
+
+body {
+    background-image:url(./images/quiz\ img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* styling welcome screen */
+
+#wlc-title {
+    font-size: 1.5cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+}
+
+#wlc-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 120px;
+}
+
+#geo {
+    font-size: 1cm;
+    font-family: fantasy;
+    background-color: green;
+    border-radius: 1cm;
+    border-color: gold;
+    margin-top: 1cm;
+}
+
+#history {
+    font-size: 1cm;
+    font-family: fantasy;
+    background-color: chocolate;
+    border-radius: 1cm;
+    border-color: gold;
+    margin-top: 1cm;
+}
+
+#fb {
+    font-size: 1cm;
+    font-family: fantasy;
+    background-color: cyan;
+    border-radius: 1cm;
+    border-color: gold;
+    margin-top: 1cm;
+}
+
+/* styling geo screens */
+
+/* questions:- */
+
+#geo1q {
+    font-size: 1.1cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+}
+
+#geo2q {
+    font-size: 1.1cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+}
+
+#geo3q {
+    font-size: 1.1cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+}
+
+#geo4q {
+    font-size: 1.1cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+}
+
+#geo5q {
+    font-size: 1.1cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+}
+
+/* answers:- */
+
+/* div */
+
+#geo1a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+}
+
+#geo2a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+}
+
+#geo3a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+}
+
+#geo4a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+}
+
+#geo5a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+}
+
+/* buttons */
+
+.geo1Buttons {
+    font-size: 0.8cm;
+    font-family: fantasy;
+    background-color:#aaf7aa;
+    border-radius: 1cm;
+    border-color: gold;
+    margin-top: 1cm;
+}
+
+.geo2Buttons {
+    font-size: 0.8cm;
+    font-family: fantasy;
+    background-color:#aaf7aa;
+    border-radius: 1cm;
+    border-color: gold;
+    margin-top: 1cm;
+}
+
+.geo3Buttons {
+    font-size: 0.8cm;
+    font-family: fantasy;
+    background-color:#aaf7aa;
+    border-radius: 1cm;
+    border-color: gold;
+    margin-top: 1cm;
+}
+
+.geo4Buttons {
+    font-size: 0.8cm;
+    font-family: fantasy;
+    background-color:#aaf7aa;
+    border-radius: 1cm;
+    border-color: gold;
+    margin-top: 1cm;
+}
+
+.geo5Buttons {
+    font-size: 0.8cm;
+    font-family: fantasy;
+    background-color:#aaf7aa;
+    border-radius: 1cm;
+    border-color: gold;
+    margin-top: 1cm;
+}
+
+/* styling history screens */
+
