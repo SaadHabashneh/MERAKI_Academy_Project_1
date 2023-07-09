@@ -26,6 +26,7 @@ body {
 }
 
 #geo {
+    display: block;
     font-size: 1cm;
     font-family: fantasy;
     background-color: green;
@@ -35,6 +36,7 @@ body {
 }
 
 #history {
+    display: block;
     font-size: 1cm;
     font-family: fantasy;
     background-color: chocolate;
@@ -44,6 +46,7 @@ body {
 }
 
 #fb {
+    display: block;
     font-size: 1cm;
     font-family: fantasy;
     background-color: cyan;
@@ -52,9 +55,9 @@ body {
     margin-top: 1cm;
 }
 
-/* styling geo screens */
+/* styling geo */
 
-/* questions:- */
+/* questions */
 
 #geo1q {
     font-size: 1.1cm;
@@ -64,71 +67,11 @@ body {
     color: goldenrod;
 }
 
-#geo2q {
-    font-size: 1.1cm;
-    font-family: 'Trebuchet MS';
-    display: flex;
-    justify-content: center;
-    color: goldenrod;
-}
-
-#geo3q {
-    font-size: 1.1cm;
-    font-family: 'Trebuchet MS';
-    display: flex;
-    justify-content: center;
-    color: goldenrod;
-}
-
-#geo4q {
-    font-size: 1.1cm;
-    font-family: 'Trebuchet MS';
-    display: flex;
-    justify-content: center;
-    color: goldenrod;
-}
-
-#geo5q {
-    font-size: 1.1cm;
-    font-family: 'Trebuchet MS';
-    display: flex;
-    justify-content: center;
-    color: goldenrod;
-}
-
-/* answers:- */
+/* answers */
 
 /* div */
 
-#geo1a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 100px;
-}
-
-#geo2a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 100px;
-}
-
-#geo3a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 100px;
-}
-
-#geo4a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 100px;
-}
-
-#geo5a {
+#geoAns {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,52 +80,97 @@ body {
 
 /* buttons */
 
-.geo1Buttons {
+.geoButtons {
+    display: block;
     font-size: 0.8cm;
     font-family: fantasy;
-    background-color:#aaf7aa;
+    background-color: white;
     border-radius: 1cm;
     border-color: gold;
     margin-top: 1cm;
 }
 
-.geo2Buttons {
+/* styling history */
+
+/* questions */
+
+#history1q {
+    font-size: 1.1cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: goldenrod; 
+}
+
+/* answers */
+
+/* div */
+
+#historyAns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+}
+
+.historyButtons {
+    display: block;
     font-size: 0.8cm;
     font-family: fantasy;
-    background-color:#aaf7aa;
+    background-color: white;
     border-radius: 1cm;
     border-color: gold;
     margin-top: 1cm;
 }
 
-.geo3Buttons {
+/* styling football */
+
+/* questions */
+
+#fb1q {
+    font-size: 1.1cm;
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    color: goldenrod; 
+}
+
+/* answers */
+
+/* Div */
+
+#fbAns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+}
+
+/* Buttons */
+
+.fbButtons {
+    display: block;
     font-size: 0.8cm;
     font-family: fantasy;
-    background-color:#aaf7aa;
+    background-color: white;
     border-radius: 1cm;
     border-color: gold;
     margin-top: 1cm;
 }
 
-.geo4Buttons {
+/* styling next button */
+
+.nextButton {
+    display: flex;
+    justify-content: center;
+    margin: 670px;
     font-size: 0.8cm;
-    font-family: fantasy;
-    background-color:#aaf7aa;
+    font-family: serif;
+    background-color: gold;
     border-radius: 1cm;
     border-color: gold;
-    margin-top: 1cm;
+    margin-top: 0.5cm;
 }
-
-.geo5Buttons {
-    font-size: 0.8cm;
-    font-family: fantasy;
-    background-color:#aaf7aa;
-    border-radius: 1cm;
-    border-color: gold;
-    margin-top: 1cm;
-}
-
-/* styling history screens */
 
 /* styling end screen */
 
@@ -200,4 +188,17 @@ body {
     display: flex;
     justify-content: center;
     color: crimson;
+}
+
+#again {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px;
+    font-size: 1cm;
+    font-family:'Trebuchet MS';
+    background-color: blue;
+    border-radius: 1cm;
+    border-color: gold;
+    margin-top: 1cm;
 }
