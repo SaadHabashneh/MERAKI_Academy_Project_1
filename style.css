@@ -163,7 +163,7 @@ body {
 .nextButton {
     display: flex;
     justify-content: center;
-    margin: 670px;
+    margin: 660px;
     font-size: 0.8cm;
     font-family: serif;
     background-color: gold;
@@ -194,7 +194,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 100px;
+    margin: 660px;
     font-size: 1cm;
     font-family:'Trebuchet MS';
     background-color: blue;

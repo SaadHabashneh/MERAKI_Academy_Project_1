@@ -13,7 +13,7 @@ button that restarts the game.
 
 // selecting body:-
 
-const body = document.querySelector("body")
+const body = document.querySelector("body");
 
 // declaring question, score and timer variables:-
 
@@ -61,6 +61,13 @@ btnDiv.append(fbButton);
 const endDiv = document.createElement("div");
 endDiv.id = "end"
 body.append(endDiv);
+const endResult = document.createElement("h1");
+endResult.id = "endHead"
+endDiv.append(endResult);
+const yourScore = document.createElement("h3");
+yourScore.id = "endScore"
+endDiv.append(yourScore);
+endDiv.style.display = "none"
 
 // geo:-
 
@@ -116,28 +123,26 @@ const restart = () => {
 // to end screen:-
 
 const endScreen = () => {
-    geoDiv.style.display = "none"
-    historyDiv.style.display = "none"
-    fbDiv.style.display = "none"
-    const endResult = document.createElement("h1");
-    endResult.id = "endHead"
-    endDiv.append(endResult);
+  geoDiv.style.display = "none"
+  historyDiv.style.display = "none"
+  fbDiv.style.display = "none"
+  endDiv.style.display = "block"
     if (scoreSum > 2) {
-        endResult.innerText = "You Passed!"
+      endResult.innerText = "You Passed!"
     }
     else {
-        endResult.innerText = "You Failed :("
+      endResult.innerText = "You Failed :("
     }
-    const yourScore = document.createElement("h3");
-    yourScore.id = "endScore"
-    yourScore.innerText = `Your score: ${scoreSum} out of 5`
-    const btn = document.createElement("button");
-    btn.id = "again"
-    endDiv.append(btn);
-    btn.innerText = "Play Again"
-    btn.addEventListener("click", restart);
+  yourScore.innerText = `Your score: ${scoreSum} out of 5`
 };
 
+// clicking on play again button at the end screen:-
+
+const btn = document.createElement("button");
+btn.id = "again"
+endDiv.append(btn);
+btn.innerText = "Play Again"
+btn.addEventListener("click", restart);
 
 // geo data:-
 
@@ -178,39 +183,42 @@ const geoQuests = [
 // choosing geography:-
 
 const geoPick = () => {
-    wlc.style.display = "none"
-    geoDiv.style.display = "block"
-    const next1 = document.createElement("button");
-    next1.className = "nextButton"
-    next1.innerText = "Next Question"
-    geoDiv.append(next1);
-    next1.addEventListener("click", () => {
-      if (QI > geoQuests.length - 1) {
-        endScreen();
+  wlc.style.display = "none"
+  geoDiv.style.display = "block"
+  geoButtonDiv.innerHTML = ""
+  geoQuest.innerText = geoQuests[QI].q
+  geoQuests[QI].ans.forEach((elem) => {
+    const btn = document.createElement("button");
+    geoButtonDiv.append(btn);
+    btn.innerText = elem
+    btn.className = "geoButtons"
+    btn.addEventListener("click", () => {
+      if (btn.innerText === geoQuests[QI].correctAns) {
+        scoreSum += 1
+        btn.style.backgroundColor = "green"
       }
       else {
-
-        QI =+ 1
-        geoPick();
+        btn.style.backgroundColor = "red"
       }
-    })
-    geoQuest.innerText = geoQuests[QI].q
-    geoQuests[QI].ans.forEach((elem) => {
-        const btn = document.createElement("button");
-        geoButtonDiv.append(btn);
-        btn.innerText = elem
-        btn.className = "geoButtons"
-        btn.addEventListener("click", () => {
-          if (btn.innerText === geoQuests[QI].correctAns) {
-            scoreSum += 1
-            btn.style.backgroundColor = "green"
-          }
-          else {
-            btn.style.backgroundColor = "red"
-          }
-        });
-    })
+    });
+  })
 };
+
+// clicking on next button at geography's category:-
+
+const next1 = document.createElement("button");
+next1.className = "nextButton"
+next1.innerText = "Next Question"
+geoDiv.append(next1);
+next1.addEventListener("click", () => {
+  if (QI >= geoQuests.length - 1) {
+    endScreen();
+  }
+  else {
+    QI += 1
+    geoPick();
+  }
+})
 
 // clicking on geography button in the welcome screen:-
 
@@ -257,37 +265,40 @@ const historyQuests = [
 const historyPick = () => {
   wlc.style.display = "none"
   historyDiv.style.display = "block"
-  const next2 = document.createElement("button");
-  next2.className = "nextButton"
-  next2.innerText = "Next Question"
-  historyDiv.append(next2);
-  next2.addEventListener("click", () => {
-    if (QI > historyQuests.length - 1) {
-      endScreen();
-    }
-    else {
-
-      QI =+ 1
-      historyPick();
-    }
-  })
+  historyButtonDiv.innerHTML = ""
   historyQuest.innerText = historyQuests[QI].q
   historyQuests[QI].ans.forEach((elem) => {
-      const btn = document.createElement("button");
-      historyButtonDiv.append(btn);
-      btn.innerText = elem
-      btn.className = "historyButtons"
-      btn.addEventListener("click", () => {
-        if (btn.innerText === historyQuests[QI].correctAns) {
-          scoreSum += 1
-          btn.style.backgroundColor = "green"
-        }
-        else {
-          btn.style.backgroundColor = "red"
-        }
-      });
+  const btn = document.createElement("button");
+  historyButtonDiv.append(btn);
+  btn.innerText = elem
+  btn.className = "historyButtons"
+  btn.addEventListener("click", () => {
+    if (btn.innerText === historyQuests[QI].correctAns) {
+      scoreSum += 1
+      btn.style.backgroundColor = "green"
+    }
+    else {
+      btn.style.backgroundColor = "red"
+    }
+    });
   })
 };
+
+// clicking on next button at history's category:-
+
+const next2 = document.createElement("button");
+next2.className = "nextButton"
+next2.innerText = "Next Question"
+historyDiv.append(next2);
+next2.addEventListener("click", () => {
+  if (QI >= historyQuests.length - 1) {
+    endScreen();
+  }
+  else {
+    QI += 1
+    historyPick();
+  }
+})
 
 // clicking on history button in the welcome screen:-
 
@@ -334,37 +345,40 @@ const fbQuests = [
 const fbPick = () => {
   wlc.style.display = "none"
   fbDiv.style.display = "block"
-  const next3 = document.createElement("button");
-  next3.className = "nextButton"
-  next3.innerText = "Next Question"
-  fbDiv.append(next3);
-  next3.addEventListener("click", () => {
-    if (QI > fbQuests.length - 1) {
-      endScreen();
-    }
-    else {
-
-      QI =+ 1
-      fbPick();
-    }
-  })
+  fbButtonDiv.innerHTML = ""
   fbQuest.innerText = fbQuests[QI].q
   fbQuests[QI].ans.forEach((elem) => {
-      const btn = document.createElement("button");
-      fbButtonDiv.append(btn);
-      btn.innerText = elem
-      btn.className = "geoButtons"
-      btn.addEventListener("click", () => {
-        if (btn.innerText === fbQuests[QI].correctAns) {
-          scoreSum += 1
-          btn.style.backgroundColor = "green"
-        }
-        else {
-          btn.style.backgroundColor = "red"
-        }
-      });
+    const btn = document.createElement("button");
+    fbButtonDiv.append(btn);
+    btn.innerText = elem
+    btn.className = "geoButtons"
+    btn.addEventListener("click", () => {
+      if (btn.innerText === fbQuests[QI].correctAns) {
+        scoreSum += 1
+        btn.style.backgroundColor = "green"
+      }
+      else {
+        btn.style.backgroundColor = "red"
+      }
+    });
   })
 };  
+
+// clicking on next button at football's category:-
+
+const next3 = document.createElement("button");
+next3.className = "nextButton"
+next3.innerText = "Next Question"
+fbDiv.append(next3);
+next3.addEventListener("click", () => {
+  if (QI >= fbQuests.length - 1) {
+    endScreen();
+  }
+  else {
+    QI += 1
+    fbPick();
+  }
+})
 
 // clicking on football button in the welcome screen:-
 
