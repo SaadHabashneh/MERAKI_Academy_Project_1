@@ -55,12 +55,23 @@ body {
     margin-top: 1cm;
 }
 
+/* styling the timer */
+
+.timeLeft {
+    display: flex;
+    justify-content: center;
+    font-size: 0.7cm;
+    font-family: 'Trebuchet MS';
+    
+    color: red
+}
+
 /* styling geo */
 
 /* questions */
 
 #geo1q {
-    font-size: 1.1cm;
+    font-size: 1cm;
     font-family: 'Trebuchet MS';
     display: flex;
     justify-content: center;
@@ -75,7 +86,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 100px;
+    margin: 70px;
 }
 
 /* buttons */
@@ -95,7 +106,7 @@ body {
 /* questions */
 
 #history1q {
-    font-size: 1.1cm;
+    font-size: 1cm;
     font-family: 'Trebuchet MS';
     display: flex;
     justify-content: center;
@@ -110,7 +121,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 100px;
+    margin: 70px;
 }
 
 .historyButtons {
@@ -128,7 +139,7 @@ body {
 /* questions */
 
 #fb1q {
-    font-size: 1.1cm;
+    font-size: 1cm;
     font-family: 'Trebuchet MS';
     display: flex;
     justify-content: center;
@@ -143,7 +154,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 100px;
+    margin: 70px;
 }
 
 /* Buttons */
@@ -163,13 +174,12 @@ body {
 .nextButton {
     display: flex;
     justify-content: center;
-    margin: 660px;
+    margin-left: 17.5cm;
     font-size: 0.8cm;
     font-family: serif;
     background-color: gold;
     border-radius: 1cm;
     border-color: gold;
-    margin-top: 0.5cm;
 }
 
 /* styling end screen */
