@@ -66,6 +66,12 @@ body {
     color: red
 }
 
+/* adding a cursor style when hovering on buttons */
+
+button:hover {
+    cursor: pointer;
+}
+
 /* styling geo */
 
 /* questions */
@@ -101,6 +107,10 @@ body {
     margin-top: 1cm;
 }
 
+.geoButtons:hover {
+    background-color: #b9eef3;
+}
+
 /* styling history */
 
 /* questions */
@@ -132,6 +142,10 @@ body {
     border-radius: 1cm;
     border-color: gold;
     margin-top: 1cm;
+}
+
+.historyButtons:hover {
+    background-color: #b9eef3;
 }
 
 /* styling football */
@@ -167,6 +181,10 @@ body {
     border-radius: 1cm;
     border-color: gold;
     margin-top: 1cm;
+}
+
+.fbButtons:hover {
+    background-color: #b9eef3;
 }
 
 /* styling next button */

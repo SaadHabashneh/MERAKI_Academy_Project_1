@@ -30,7 +30,6 @@ let timer = 10;
 
 let interval;
 
-
 // welcome div:-
 
 const wlc = document.createElement("div");
@@ -76,7 +75,7 @@ yourScore.id = "endScore";
 endDiv.append(yourScore);
 endDiv.style.display = "none";
 
-// geo:-
+// geography:-
 
 const geoDiv = document.createElement("div");
 geoDiv.id = "geo1";
@@ -165,8 +164,8 @@ const restart = () => {
   QI = 0;
   scoreSum = 0;
   timer = 10;
+  clearInterval(interval);
 };
-
 
 // to end screen:-
 
@@ -252,6 +251,7 @@ const geoPick = () => {
       else {
         btn.style.backgroundColor = "red";
       }
+      document.querySelectorAll(".geoButtons").forEach(btn => btn.disabled = true);
     });
   });
 };
@@ -279,7 +279,6 @@ next1.addEventListener("click", () => {
 // clicking on geography button in the welcome screen:-
 
 geoButton.addEventListener("click", geoPick);
-
 
 // history data:-
 
@@ -340,6 +339,7 @@ const historyPick = () => {
     else {
       btn.style.backgroundColor = "red";
     }
+    document.querySelectorAll(".historyButtons").forEach(btn => btn.disabled = true);
     });
   });
 };
@@ -367,7 +367,6 @@ next2.addEventListener("click", () => {
 // clicking on history button in the welcome screen:-
 
 historyButton.addEventListener("click", historyPick);
-
 
 // football data:-
 
@@ -419,7 +418,7 @@ const fbPick = () => {
     const btn = document.createElement("button");
     fbButtonDiv.append(btn);
     btn.innerText = elem;
-    btn.className = "geoButtons";
+    btn.className = "fbButtons";
     btn.addEventListener("click", () => {
       if (btn.innerText === fbQuests[QI].correctAns) {
         scoreSum += 1
@@ -428,6 +427,7 @@ const fbPick = () => {
       else {
         btn.style.backgroundColor = "red";
       }
+      document.querySelectorAll(".fbButtons").forEach(btn => btn.disabled = true);
     });
   });
 };  
